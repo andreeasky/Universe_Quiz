@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-    //  This method checks the responses for all questions and calculates the total score //
+    // This method checks the responses for all questions and calculates the total score
 
     public void checkScore(View view) {
 
@@ -34,8 +34,7 @@ public class MainActivity extends AppCompatActivity {
         boolean isQuestion1OptionC = question1OptionC.isChecked();
         if (isQuestion1OptionB) {
             scoreQuestion1 = 1;
-        }
-        if (isQuestion1OptionA && isQuestion1OptionC) {
+        } else {
             scoreQuestion1 = 0;
         }
 
@@ -49,8 +48,7 @@ public class MainActivity extends AppCompatActivity {
         boolean isQuestion2OptionC = question2OptionC.isChecked();
         if (isQuestion2OptionC) {
             scoreQuestion2 = 1;
-        }
-        if (isQuestion2OptionA && isQuestion2OptionB) {
+        } else {
             scoreQuestion2 = 0;
         }
 
@@ -64,8 +62,7 @@ public class MainActivity extends AppCompatActivity {
         boolean isQuestion3OptionC = question3OptionC.isChecked();
         if (isQuestion3OptionB) {
             scoreQuestion3 = 1;
-        }
-        if (isQuestion3OptionA && isQuestion3OptionC) {
+        } else {
             scoreQuestion3 = 0;
         }
 
@@ -79,8 +76,7 @@ public class MainActivity extends AppCompatActivity {
         boolean isQuestion4OptionC = question4OptionC.isChecked();
         if (isQuestion4OptionA) {
             scoreQuestion4 = 1;
-        }
-        if (isQuestion4OptionB && isQuestion4OptionC) {
+        } else {
             scoreQuestion4 = 0;
         }
 
@@ -93,7 +89,6 @@ public class MainActivity extends AppCompatActivity {
         } else {
             scoreQuestion5 = 0;
         }
-
 
         // Check response for Question 6 //
 
@@ -111,75 +106,72 @@ public class MainActivity extends AppCompatActivity {
         boolean isQuestion6OptionF = question6OptionF.isChecked();
         if (isQuestion6OptionB && isQuestion6OptionC && isQuestion6OptionE && isQuestion6OptionF && !isQuestion6OptionA && !isQuestion6OptionD) {
             scoreQuestion6 = 1;
-
-            // Check response for Question 7 //
-
-            RadioButton question7OptionA = (RadioButton) findViewById(R.id.Question7_OptionA);
-            boolean isQuestion7OptionA = question7OptionA.isChecked();
-            RadioButton question7OptionB = (RadioButton) findViewById(R.id.Question7_OptionB);
-            boolean isQuestion7OptionB = question7OptionB.isChecked();
-            RadioButton question7OptionC = (RadioButton) findViewById(R.id.Question7_OptionC);
-            boolean isQuestion7OptionC = question7OptionC.isChecked();
-            if (isQuestion7OptionA) {
-                scoreQuestion7 = 1;
-            }
-            if (isQuestion7OptionB && isQuestion7OptionC) {
-                scoreQuestion7 = 0;
-            }
-
-            // Check response for Question 8 //
-
-            RadioButton question8OptionA = (RadioButton) findViewById(R.id.Question8_OptionA);
-            boolean isQuestion8OptionA = question8OptionA.isChecked();
-            RadioButton question8OptionB = (RadioButton) findViewById(R.id.Question8_OptionB);
-            boolean isQuestion8OptionB = question8OptionB.isChecked();
-            RadioButton question8OptionC = (RadioButton) findViewById(R.id.Question8_OptionC);
-            boolean isQuestion8OptionC = question8OptionC.isChecked();
-            if (isQuestion8OptionC) {
-                scoreQuestion8 = 1;
-            }
-            if (isQuestion8OptionA && isQuestion8OptionB) {
-                scoreQuestion8 = 0;
-            }
-
-            // Check response for Question 9 //
-
-            RadioButton question9OptionA = (RadioButton) findViewById(R.id.Question9_OptionA);
-            boolean isQuestion9OptionA = question9OptionA.isChecked();
-            RadioButton question9OptionB = (RadioButton) findViewById(R.id.Question9_OptionB);
-            boolean isQuestion9OptionB = question9OptionB.isChecked();
-            if (isQuestion9OptionA) {
-                scoreQuestion9 = 1;
-            }
-            if (isQuestion9OptionB) {
-                scoreQuestion9 = 0;
-            }
-
-            // Check response for Question 10 //
-
-            RadioButton question10OptionA = (RadioButton) findViewById(R.id.Question10_OptionA);
-            boolean isQuestion10OptionA = question10OptionA.isChecked();
-            RadioButton question10OptionB = (RadioButton) findViewById(R.id.Question10_OptionB);
-            boolean isQuestion10OptionB = question10OptionB.isChecked();
-            RadioButton question10OptionC = (RadioButton) findViewById(R.id.Question10_OptionC);
-            boolean isQuestion10OptionC = question10OptionC.isChecked();
-            RadioButton question10OptionD = (RadioButton) findViewById(R.id.Question10_OptionD);
-            boolean isQuestion10OptionD = question10OptionD.isChecked();
-            if (isQuestion10OptionC) {
-                scoreQuestion10 = 1;
-            }
-            if (isQuestion10OptionA && isQuestion10OptionB && isQuestion10OptionD) {
-                scoreQuestion10 = 0;
-            }
-
-            // This method calculates the total score //
-
-            score = scoreQuestion1 + scoreQuestion2 + scoreQuestion3 + scoreQuestion4 + scoreQuestion5 + scoreQuestion6 + scoreQuestion7 + scoreQuestion8 + scoreQuestion9 + scoreQuestion10;
-
-            // This method displays the total score //
-
-            Toast.makeText(this, "Your score is " + score + " out of 10", Toast.LENGTH_LONG).show();
         }
+
+        // Check response for Question 7 //
+
+        RadioButton question7OptionA = (RadioButton) findViewById(R.id.Question7_OptionA);
+        boolean isQuestion7OptionA = question7OptionA.isChecked();
+        RadioButton question7OptionB = (RadioButton) findViewById(R.id.Question7_OptionB);
+        boolean isQuestion7OptionB = question7OptionB.isChecked();
+        RadioButton question7OptionC = (RadioButton) findViewById(R.id.Question7_OptionC);
+        boolean isQuestion7OptionC = question7OptionC.isChecked();
+        if (isQuestion7OptionA) {
+            scoreQuestion7 = 1;
+        } else {
+            scoreQuestion7 = 0;
+        }
+
+        // Check response for Question 8 //
+
+        RadioButton question8OptionA = (RadioButton) findViewById(R.id.Question8_OptionA);
+        boolean isQuestion8OptionA = question8OptionA.isChecked();
+        RadioButton question8OptionB = (RadioButton) findViewById(R.id.Question8_OptionB);
+        boolean isQuestion8OptionB = question8OptionB.isChecked();
+        RadioButton question8OptionC = (RadioButton) findViewById(R.id.Question8_OptionC);
+        boolean isQuestion8OptionC = question8OptionC.isChecked();
+        if (isQuestion8OptionC) {
+            scoreQuestion8 = 1;
+        } else {
+            scoreQuestion8 = 0;
+        }
+
+        // Check response for Question 9 //
+
+        RadioButton question9OptionA = (RadioButton) findViewById(R.id.Question9_OptionA);
+        boolean isQuestion9OptionA = question9OptionA.isChecked();
+        RadioButton question9OptionB = (RadioButton) findViewById(R.id.Question9_OptionB);
+        boolean isQuestion9OptionB = question9OptionB.isChecked();
+        if (isQuestion9OptionA) {
+            scoreQuestion9 = 1;
+        } else {
+            scoreQuestion9 = 0;
+        }
+
+        // Check response for Question 10 //
+
+        RadioButton question10OptionA = (RadioButton) findViewById(R.id.Question10_OptionA);
+        boolean isQuestion10OptionA = question10OptionA.isChecked();
+        RadioButton question10OptionB = (RadioButton) findViewById(R.id.Question10_OptionB);
+        boolean isQuestion10OptionB = question10OptionB.isChecked();
+        RadioButton question10OptionC = (RadioButton) findViewById(R.id.Question10_OptionC);
+        boolean isQuestion10OptionC = question10OptionC.isChecked();
+        RadioButton question10OptionD = (RadioButton) findViewById(R.id.Question10_OptionD);
+        boolean isQuestion10OptionD = question10OptionD.isChecked();
+        if (isQuestion10OptionC) {
+            scoreQuestion10 = 1;
+        } else {
+            scoreQuestion10 = 0;
+        }
+
+        // This method calculates the total score //
+
+        score = scoreQuestion1 + scoreQuestion2 + scoreQuestion3 + scoreQuestion4 + scoreQuestion5 + scoreQuestion6 + scoreQuestion7 + scoreQuestion8 + scoreQuestion9 + scoreQuestion10;
+
+        // This method displays the total score //
+
+        Toast.makeText(this, "Your score is " + score + " out of 10", Toast.LENGTH_LONG).show();
     }
 }
+
 
